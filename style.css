@@ -11,29 +11,29 @@
  Tags:         Tags: green, light, white, gray, black, purple, one-column, two-columns, right-sidebar, fluid-layout, responsive-layout, responsive-layout, photoblogging, left-sidebar, translation-ready, custom-background, custom-colors, custom-menu, featured-images, full-width-template, post-formats, theme-options, threaded-comments
  Text Domain:  dazzling
 */
-
-
-
 /*******
  **
  ** Custom CSS
  **
  *******
  */
-.home-widget .widget_rss .widgettitle { display: none; }
+.home-widget .widget_rss .widgettitle {
+  display: none; }
+
 #logo {
-position: relative;
-padding-top: 64px;
-}
+  position: relative;
+  padding-top: 64px; }
+
 #logo:before {
-content: ' ';
-background: url(images/lll-logo.png) center center;
-background-size: contain;
-width: 64px;
-height: 64px;
-position: absolute;
-top: 10px;
-left: 0;
-right: 0;
-margin: auto;
-}
+  content: ' ';
+  background: url(images/lll-logo.png) center center;
+  background-size: contain;
+  width: 64px;
+  height: 64px;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  right: 0;
+  margin: auto; }
+
+/*# sourceMappingURL=style.css.map */
