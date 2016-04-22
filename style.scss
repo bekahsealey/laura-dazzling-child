@@ -1,0 +1,69 @@
+/*
+ Theme Name:   Laura's Dazzling Child Theme
+ Theme URI: http://colorlib.com/wp/themes/dazzling
+ Description:  Dazzling Child Theme
+ Author:       Bekah Sealey
+ Author URI:   http://bekahsealey.com
+ Template:     dazzling
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         Tags: green, light, white, gray, black, purple, one-column, two-columns, right-sidebar, fluid-layout, responsive-layout, responsive-layout, photoblogging, left-sidebar, translation-ready, custom-background, custom-colors, custom-menu, featured-images, full-width-template, post-formats, theme-options, threaded-comments
+ Text Domain:  dazzling
+*/
+
+
+// Color variables
+ 
+
+$purple: #58038e;
+$deep-purple: #39015c;
+$lt-purple: #9d5cc7;
+$md-green: #729525;
+$mustard: #d4d100;
+$lt-mustard: #eae73a;
+$deep-wine: #6d0042;
+$md-wine: #7d1f58;
+$gray: #6b6b6b;
+$md-gray: #606060;
+$dk-gray: #2d2d2d;
+
+$element: $purple;
+$h-element: $deep-wine;
+$action-bg: $md-green;
+$action-a-border: $mustard;
+$action-a-text: $lt-mustard;
+$body-text: $gray;
+$link: $deep-purple;
+$h-link: $deep-wine;
+$main-nav-link: $md-gray;
+$main-nav-bg: $lt-purple;
+$main-nav-dd: $deep-purple;
+$footer-widget-bg: $md-wine;
+$footer-bg: $deep-wine;
+$footer-text: $dk-gray;
+
+
+/*******
+ **
+ ** Custom CSS
+ **
+ *******
+ */
+.home-widget .widget_rss .widgettitle { display: none; }
+#logo {
+position: relative;
+padding-top: 64px;
+}
+#logo:before {
+content: ' ';
+background: url(images/lll-logo.png) center center;
+background-size: contain;
+width: 64px;
+height: 64px;
+position: absolute;
+top: 10px;
+left: 0;
+right: 0;
+margin: auto;
+}
