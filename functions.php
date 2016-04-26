@@ -5,27 +5,39 @@ function theme_enqueue_styles() {
 
 }
 
-add_action( 'after_setup_theme', 'register_submenu' );
-function register_submenu() {
-  register_nav_menu( 'submenu', __( 'Submenu', 'dazzling' ) );
-}
-
 /**
- * sub menu (should you choose to use one)
+ * left and right header menus (should you choose to use one)
  */
-function dazzling_sub_menu() {
+register_nav_menus( array(
+	'left_header_menu' => __( 'Left Header Menu', 'dazzling' ),
+	'right_header_menu' => __( 'Right Header Menu', 'dazzling' )
+) );
+
+function dazzling_left_menu() {
   // display the WordPress Custom Menu if available
   wp_nav_menu(array(
-    'menu'              => 'submenu',
-    'theme_location'    => 'submenu',
+    'menu'              => 'left_header_menu',
+    'theme_location'    => 'left_header_menu',
     'depth'             => 2,
     'container'         => 'div',
-    'container_class'   => 'collapse navbar-collapse navbar-ex1-collapse',
-    'menu_class'        => 'nav navbar-nav',
+    'container_class'   => 'collapse navbar-collapse navbar-ex1-collapse flex left',
+    'menu_class'        => 'nav',
     'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
     'walker'            => new wp_bootstrap_navwalker()
   ));
-} /* end sub menu */
+}
 
-
+function dazzling_right_menu() {
+  // display the WordPress Custom Menu if available
+  wp_nav_menu(array(
+    'menu'              => 'right_header_menu',
+    'theme_location'    => 'right_header_menu',
+    'depth'             => 2,
+    'container'         => 'div',
+    'container_class'   => 'collapse navbar-collapse navbar-ex1-collapse flex right',
+    'menu_class'        => 'nav',
+    'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+    'walker'            => new wp_bootstrap_navwalker()
+  ));
+} /* end left and right header menus */ 
 ?>
