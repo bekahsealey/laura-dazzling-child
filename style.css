@@ -23,8 +23,17 @@
 #logo {
   position: relative;
   padding-top: 64px; }
+  #logo p {
+    margin-top: 1.4em; }
+  #logo a {
+    color: #bce366;
+    font-size: 24px;
+    margin: 8px 0;
+    height: 50px;
+    padding: 15px 15px;
+    line-height: 20px; }
 
-#logo:before {
+.site-title a:before {
   content: ' ';
   background: url(images/lll-logo.png) center center;
   background-size: contain;
@@ -35,5 +44,33 @@
   left: 0;
   right: 0;
   margin: auto; }
+
+@media (min-width: 768px) {
+  .navbar-brand, .site-title, .site-description {
+    margin-left: initial !important;
+    text-align: center; }
+
+  .flex {
+    float: none; }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .container ul {
+      display: flex;
+      justify-content: space-between; }
+      .container ul a {
+        padding: 1rem 2rem;
+        text-transform: uppercase; }
+    .container .navbar-header {
+      order: 2;
+      flex: 1 1 100%; }
+    .container .left {
+      order: 1;
+      flex: 1 1 100%; }
+    .container .right {
+      order: 3;
+      flex: 1 1 100%; } }
 
 /*# sourceMappingURL=style.css.map */
