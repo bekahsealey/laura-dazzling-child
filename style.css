@@ -33,6 +33,49 @@
     display: block;
     margin: auto; }
 
+.featured {
+  background: #7d1f58;
+  padding: 2em;
+  color: #b5b5b5; }
+  .featured a {
+    color: #e3e3e3; }
+  .featured a:hover, .featured a:focus {
+    color: #424242; }
+  .featured .module {
+    background: #6d0042;
+    margin: 0 1em;
+    padding: 0.5em 2em 1em; }
+    .featured .module p:first-of-type {
+      margin-top: 1em; }
+  .featured ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0; }
+  .featured li {
+    margin: .5em 0; }
+  .featured .podcast .wp-post-image {
+    width: 50px;
+    float: left;
+    background: #fff; }
+  .featured .cfa-button {
+    border-color: #b5b5b5; }
+  .featured .podcast {
+    overflow: auto;
+    display: block;
+    height: 72px;
+    text-align: left; }
+    .featured .podcast .title {
+      margin-left: 70px;
+      line-height: 28px; }
+  .featured .podcast-button:hover, .featured .podcast-button:focus {
+    background: #e3e3e3; }
+
+.site-info a, .footer-nav a {
+  text-decoration: underline; }
+
+.nav-pills > li.active > a, .dropdown-menu > .active > a, .dropdown-menu > .active > a:focus, .dropdown-menu > .active > a:hover {
+  background: #729525; }
+
 /*******
  **
  ** Custom CSS
@@ -74,30 +117,37 @@
     color: #bce366; }
 
   .flex-container {
-    display: flex;
-    justify-content: center;
-    align-items: center; }
+    display: flex; }
     .flex-container .flex {
       float: none; }
-    .flex-container ul {
+    .flex-container ul.nav {
       display: flex;
       justify-content: space-between; }
-      .flex-container ul a {
+      .flex-container ul.nav a {
         padding: 1rem 2rem;
         text-transform: uppercase;
         font-weight: bold;
         font-size: 1.2em;
         color: #424242; }
-      .flex-container ul a:hover {
+      .flex-container ul.nav a:hover {
         color: #6d0042; }
+    .flex-container .navbar-header, .flex-container .left, .flex-container .right, .flex-container .module {
+      flex: 1 1 100%; }
+    .flex-container .module {
+      width: 40%;
+      align-content: stretch; }
     .flex-container .navbar-header {
-      order: 2;
-      flex: 1 1 100%; }
+      order: 2; }
     .flex-container .left {
-      order: 1;
-      flex: 1 1 100%; }
+      order: 1; }
     .flex-container .right {
-      order: 3;
-      flex: 1 1 100%; } }
+      order: 3; }
+
+  .flex-container.center {
+    justify-content: center;
+    align-items: center; }
+
+  .flex-container.between {
+    justify-content: space-between; } }
 
 /*# sourceMappingURL=style.css.map */

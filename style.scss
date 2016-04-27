@@ -21,15 +21,20 @@ $deep-purple: #39015c;
 $lt-purple: #9d5cc7;
 $lt-green: #bce366;
 $md-green: #729525;
+$dk-green: #598100;
 $mustard: #d4d100;
 $lt-mustard: #eae73a;
 $deep-wine: #6d0042;
 $md-wine: #7d1f58;
+$rose: #d33595;
+$lt-rose: #d35fa5;
+$lt-gray: #b5b5b5;
 $gray: #6b6b6b;
 $md-gray: #424242;
 $dk-gray: #2d2d2d;
 $blue: #7960d7;
 $lt-blue: #9d8ae6;
+$white: #e3e3e3;
 
 $element: $purple;
 $h-element: $deep-wine;
@@ -43,10 +48,17 @@ $h-link: $deep-wine;
 $main-nav-link: $md-gray;
 $main-nav-bg: $lt-purple;
 $main-nav-dd: $deep-purple;
-$footer-widget-bg: $md-wine;
-$footer-bg: $deep-wine;
+$footer-widget-bg: $md-green;
+$footer-bg: $dk-green;
 $footer-text: $dk-gray;
+$footer-link: $lt-green;
+$featured-bg: $md-wine;
+$featured-mod: $deep-wine;
 $testimonial-bg: $lt-blue;
+$module-a: $white;
+$h-module: $md-gray;
+$module-text: $lt-gray;
+
 
 .intro {
 	font-family: fontawesome;
@@ -73,6 +85,61 @@ $testimonial-bg: $lt-blue;
 		display: block;
 		margin: auto;
 	}
+}
+.featured {
+	background: $featured-bg;
+	padding: 2em;
+	color: $module-text;
+	& a {
+		color: $module-a;
+	}
+	& a:hover, a:focus {
+		color: $h-module;
+	}
+	& .module {
+		background: $featured-mod;
+	  	margin: 0 1em;
+	  	padding: 0.5em 2em 1em;
+	  	& p:first-of-type {
+	  		margin-top: 1em;
+	  	}
+	}
+	& ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+	& li {
+		margin: .5em 0;
+	}
+	& .podcast .wp-post-image {
+		width: 50px;
+		float: left;
+		background: #fff;
+	}
+	& .cfa-button {
+		border-color: $module-text;
+		}
+	& .podcast {
+		overflow: auto;
+		display: block;
+		height: 72px;
+		text-align: left;
+		& .title {
+			margin-left: 70px;
+			line-height: 28px;
+		}
+	}
+	& .podcast-button:hover, .podcast-button:focus {
+		background: $white;
+	}
+}
+
+.site-info a, .footer-nav a {
+	text-decoration: underline;
+} 
+.nav-pills > li.active > a,.dropdown-menu > .active > a, .dropdown-menu > .active > a:focus, .dropdown-menu > .active > a:hover {
+	background: $md-green;
 }
 /*******
  **
@@ -116,13 +183,10 @@ padding-top: 128px;
 	}
 	.flex-container {
 		display: flex;
-	  	justify-content: center;
-	  	align-items: center;
-
 		& .flex {
 			float: none;
 		}
-	  & ul {
+	  & ul.nav {
 	    display: flex;
 	    justify-content: space-between;
 	    & a {
@@ -136,17 +200,28 @@ padding-top: 128px;
 	    	color: $h-link;
 	    }
 	  }
+	  & .navbar-header, .left, .right, .module {
+	  	flex: 1 1 100%;
+	  }
+	  & .module {
+	  	width: 40%;
+	  	align-content: stretch;
+	  }
 	  & .navbar-header {
 	  	order: 2;
-	  	flex: 1 1 100%;
 	  }
 	  & .left {
 	  	order: 1;
-	  	flex: 1 1 100%;
 	  }
 	  & .right {
 	  	order: 3;
-	  	flex: 1 1 100%;
 	  }
 	}
+	.flex-container.center {	
+		  	justify-content: center;
+		  	align-items: center;
+		}
+	.flex-container.between {
+			justify-content: space-between;
+		}
 }
