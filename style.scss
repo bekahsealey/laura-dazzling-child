@@ -19,20 +19,24 @@
 $purple: #58038e;
 $deep-purple: #39015c;
 $lt-purple: #9d5cc7;
+$lt-green: #bce366;
 $md-green: #729525;
 $mustard: #d4d100;
 $lt-mustard: #eae73a;
 $deep-wine: #6d0042;
 $md-wine: #7d1f58;
 $gray: #6b6b6b;
-$md-gray: #606060;
+$md-gray: #424242;
 $dk-gray: #2d2d2d;
+$blue: #7960d7;
+$lt-blue: #9d8ae6;
 
 $element: $purple;
 $h-element: $deep-wine;
 $action-bg: $md-green;
 $action-a-border: $mustard;
 $action-a-text: $lt-mustard;
+$title: $lt-green;
 $body-text: $gray;
 $link: $deep-purple;
 $h-link: $deep-wine;
@@ -42,8 +46,34 @@ $main-nav-dd: $deep-purple;
 $footer-widget-bg: $md-wine;
 $footer-bg: $deep-wine;
 $footer-text: $dk-gray;
+$testimonial-bg: $lt-blue;
 
-
+.intro {
+	font-family: fontawesome;
+	font-size: 1.4em;
+	width: 60%;
+	text-align: center;
+	margin: 2em auto;
+	& ul {
+		list-style-type: none;
+	}
+	& .post-meta-key {
+		display: none;
+	}
+}
+.testimonial {
+	background: $testimonial-bg;
+	padding: 3em 0;
+	& div:first-child {
+		margin: auto;
+		font-size: 1.5rem;
+	}
+	& .wp-post-image {
+		border-radius: 50%;
+		display: block;
+		margin: auto;
+	}
+}
 /*******
  **
  ** Custom CSS
@@ -53,7 +83,7 @@ $footer-text: $dk-gray;
 .home-widget .widget_rss .widgettitle { display: none; }
 #logo {
 position: relative;
-padding-top: 64px;
+padding-top: 128px;
 	& p {
 		margin-top: 1.4em;
 	}
@@ -67,36 +97,43 @@ padding-top: 64px;
 	}
 }
 .site-title a:before {
-content: ' ';
-background: url(images/lll-logo.png) center center;
-background-size: contain;
-width: 64px;
-height: 64px;
-position: absolute;
-top: 10px;
-left: 0;
-right: 0;
-margin: auto;
+	content: ' ';
+	background: url(images/lll-logo.png) center center;
+	background-size: contain;
+	width: 128px;
+	height: 128px;
+	position: absolute;
+	top: 10px;
+	left: 0;
+	right: 0;
+	margin: auto;
 }
-
 @media (min-width: 768px) {
 	.navbar-brand, .site-title, .site-description {
 		margin-left: initial !important;
 		text-align: center;
+		color: $title;
 	}
-	.flex {
-		float: none;
-	}
-	.container {
+	.flex-container {
 		display: flex;
 	  	justify-content: center;
 	  	align-items: center;
+
+		& .flex {
+			float: none;
+		}
 	  & ul {
 	    display: flex;
 	    justify-content: space-between;
 	    & a {
 	      padding: 1rem 2rem;
 	      text-transform: uppercase;
+	      font-weight: bold;
+	      font-size: 1.2em;
+	      color: $main-nav-link;
+	    }
+	    & a:hover {
+	    	color: $h-link;
 	    }
 	  }
 	  & .navbar-header {

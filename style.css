@@ -11,6 +11,28 @@
  Tags:         Tags: green, light, white, gray, black, purple, one-column, two-columns, right-sidebar, fluid-layout, responsive-layout, responsive-layout, photoblogging, left-sidebar, translation-ready, custom-background, custom-colors, custom-menu, featured-images, full-width-template, post-formats, theme-options, threaded-comments
  Text Domain:  dazzling
 */
+.intro {
+  font-family: fontawesome;
+  font-size: 1.4em;
+  width: 60%;
+  text-align: center;
+  margin: 2em auto; }
+  .intro ul {
+    list-style-type: none; }
+  .intro .post-meta-key {
+    display: none; }
+
+.testimonial {
+  background: #9d8ae6;
+  padding: 3em 0; }
+  .testimonial div:first-child {
+    margin: auto;
+    font-size: 1.5rem; }
+  .testimonial .wp-post-image {
+    border-radius: 50%;
+    display: block;
+    margin: auto; }
+
 /*******
  **
  ** Custom CSS
@@ -22,7 +44,7 @@
 
 #logo {
   position: relative;
-  padding-top: 64px; }
+  padding-top: 128px; }
   #logo p {
     margin-top: 1.4em; }
   #logo a {
@@ -37,8 +59,8 @@
   content: ' ';
   background: url(images/lll-logo.png) center center;
   background-size: contain;
-  width: 64px;
-  height: 64px;
+  width: 128px;
+  height: 128px;
   position: absolute;
   top: 10px;
   left: 0;
@@ -48,28 +70,33 @@
 @media (min-width: 768px) {
   .navbar-brand, .site-title, .site-description {
     margin-left: initial !important;
-    text-align: center; }
+    text-align: center;
+    color: #bce366; }
 
-  .flex {
-    float: none; }
-
-  .container {
+  .flex-container {
     display: flex;
     justify-content: center;
     align-items: center; }
-    .container ul {
+    .flex-container .flex {
+      float: none; }
+    .flex-container ul {
       display: flex;
       justify-content: space-between; }
-      .container ul a {
+      .flex-container ul a {
         padding: 1rem 2rem;
-        text-transform: uppercase; }
-    .container .navbar-header {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 1.2em;
+        color: #424242; }
+      .flex-container ul a:hover {
+        color: #6d0042; }
+    .flex-container .navbar-header {
       order: 2;
       flex: 1 1 100%; }
-    .container .left {
+    .flex-container .left {
       order: 1;
       flex: 1 1 100%; }
-    .container .right {
+    .flex-container .right {
       order: 3;
       flex: 1 1 100%; } }
 
