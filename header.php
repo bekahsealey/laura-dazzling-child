@@ -23,7 +23,7 @@
 <div id="page" class="hfeed site">
 
 	<nav class="navbar navbar-default" role="navigation">
-		<div class="container">
+		<div class="container flex-container">
 			<div class="navbar-header flex">
 			  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
 			    <span class="sr-only"><?php _e( 'Toggle navigation', 'dazzling' ); ?></span>
@@ -58,21 +58,14 @@
 				<?php dazzling_left_menu(); ?>
 				<?php dazzling_right_menu(); ?>
 		</div>
+		<div class="clear"></div>
 	</nav><!-- .site-navigation -->
-		<div class="meta">
-		<?php // checks if front page to display intro
-			if ( is_front_page() ) : 
-			the_meta(); 
-			endif; 
-		?>
-		</div>
-        <div class="top-section">
+	<?php // checks if not front page to start content
+		if ( !is_front_page() ) : ?> <div class="top-section">
 		<?php dazzling_featured_slider(); ?>
 		<?php dazzling_call_for_action(); ?>
+		<?php dazzling_submenu(); ?>
         </div>
-
-				<?php dazzling_header_menu(); ?>
-
         <div id="content" class="site-content container">
 
             <div class="container main-content-area"><?php
@@ -89,3 +82,4 @@
                 }
                 ?>
                 <div class="row <?php echo $layout_class; ?>">
+            <?php endif; ?>
