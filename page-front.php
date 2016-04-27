@@ -101,37 +101,59 @@ get_header(); ?>
 		?>
 	</div>
 </aside>
+<div class="featured">
+	<div class="container flex flex-container between">
+		<div class="module">
+			<h2 class="widget-title">Podcasts</h2>
+			<ul>
+			<?php $args = array(
+				'post_type' => 'lauras_podcasts',
+				'posts_per_page' => '5',
+				);
+			$my_query = new WP_Query( $args );
+				if ( $my_query->have_posts() ) {
+					while ( $my_query->have_posts() ) { 
+						$my_query->the_post();?>
+					<li><a class="btn btn-lg cfa-button podcast" href="<?php echo get_permalink(); ?>">
 
-<div class="container">
-<div class="col-md-6">
-<?php $args = array(
-	'post_type' => 'lauras_podcasts',
-	'posts_per_page' => '5',
-	);
-$my_query = new WP_Query( $args );
-	if ( $my_query->have_posts() ) {
-		while ( $my_query->have_posts() ) {
-			$my_query->the_post();
-			the_title();
-		}
-	}
-?>	
-</div>
-<div class="col-md-6">
-<?php $args = array(
-	'post_type' => 'lauras_qanda',
-	'posts_per_page' => '1',
-	);
-$my_query = new WP_Query( $args );
-	if ( $my_query->have_posts() ) {
-		while ( $my_query->have_posts() ) {
-			$my_query->the_post();
-			the_title();
-			the_excerpt();
-		}
-	}
-?>
-</div>
+					<?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'thumbnail' ); }
+					else { ; ?>
+					<img class="wp-post-image" src="http://www.lauraleelotto.com/wp-content/uploads/2016/04/cropped-lll-logo-150x150.png">
+					<?php } ?>
+					<h4 class="title"><?php the_title(); ?></h4>
+					</a></li>
+					<?php
+					}
+				}
+
+			?>	
+			</ul>
+		</div>
+		<div class="module">
+			<h2 class="widget-title">Q &amp; A's</h2>
+		<?php $args = array(
+			'post_type' => 'lauras_qanda',
+			'posts_per_page' => '1',
+			);
+		$my_query = new WP_Query( $args );
+			if ( $my_query->have_posts() ) {
+				while ( $my_query->have_posts() ) {
+					$my_query->the_post(); ?>
+					<a href="<?php echo get_permalink(); ?>">
+					<h3><?php the_title(); ?></h3>
+					</a>
+					<?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'module' ); }
+					else { ; ?>
+					<img class="wp-post-image" src="http://www.lauraleelotto.com/wp-content/uploads/2016/04/cropped-lll-logo.png">
+					<?php } ?>
+					<?php the_excerpt(); ?>
+					<a class="btn btn-lg cfa-button" href="<?php echo get_permalink(); ?>">Read More</a>
+					<?php
+				}
+			}
+		?>
+		</div>
+	</div>
 </div>
 
 
