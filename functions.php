@@ -5,6 +5,7 @@ function theme_enqueue_styles() {
 
 }
 add_image_size( 'testimonial', 200, 200 , true); // Thumbnail for testimonial images
+add_image_size( 'module', 400, 180 , true); // Thumbnail for module images
 /**
  * left and right header menus (should you choose to use one)
  */
