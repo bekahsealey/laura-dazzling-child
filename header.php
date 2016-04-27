@@ -23,7 +23,7 @@
 <div id="page" class="hfeed site">
 
 	<nav class="navbar navbar-default" role="navigation">
-		<div class="container flex-container">
+		<div class="container flex-container center">
 			<div class="navbar-header flex">
 			  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
 			    <span class="sr-only"><?php _e( 'Toggle navigation', 'dazzling' ); ?></span>
