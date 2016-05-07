@@ -12,11 +12,11 @@ jQuery(document).ready(function($) {
         var intro = $( '.intro' ).height();
         top = top + intro;
     }
-      if ( $( ".top-section" ).length ) {
+      if ( $( ".top-section" ).height > 0 ) {
         var topSection = $( '.top-section' ).height();
         top = top + topSection + 100;
     }
-    console.log(top);
+    console.log(topSection);
     if ($(window).scrollTop() > top) {
       $('.scroll-stick').addClass('navbar-fixed-top');
     }
