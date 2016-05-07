@@ -169,6 +169,9 @@
   right: 0;
   margin: auto; }
 
+.scroll-stick {
+  background: #fff; }
+
 @media (max-width: 768px) {
   .testimonial .pull-right {
     float: none !important; } }
@@ -213,7 +216,6 @@
     justify-content: space-between; }
 
   .scroll-stick.navbar-fixed-top {
-    margin-top: 32px;
-    background: #fff; } }
+    top: 32px; } }
 
 /*# sourceMappingURL=style.css.map */

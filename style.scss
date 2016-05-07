@@ -251,6 +251,9 @@ border: 1px $sub-action solid;
 	right: 0;
 	margin: auto;
 }
+.scroll-stick {
+	    background: #fff;
+}
 @media (max-width: 768px) {
 	.testimonial .pull-right {
 		float: none !important;
@@ -306,7 +309,6 @@ border: 1px $sub-action solid;
 			justify-content: space-between;
 		}
 	.scroll-stick.navbar-fixed-top {
-		    margin-top: 32px;
-		    background: #fff;
+		    top: 32px;
 	}
 }
