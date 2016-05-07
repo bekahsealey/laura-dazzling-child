@@ -12,9 +12,9 @@ jQuery(document).ready(function($) {
         var intro = $( '.intro' ).height();
         top = top + intro;
     }
-      if ( $( ".top-section" ).height > 0 ) {
+      if ( $( ".top-section" ).height() > 0 ) {
         var topSection = $( '.top-section' ).height();
-        top = top + topSection + 100;
+        top = top + topSection + 72;
     }
     console.log(topSection);
     if ($(window).scrollTop() > top) {
