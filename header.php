@@ -58,14 +58,14 @@
 				<?php dazzling_left_menu(); ?>
 				<?php dazzling_right_menu(); ?>
 		</div>
-		<div class="clear"></div>
 	</nav><!-- .site-navigation -->
 	<?php // checks if not front page to start content
-		if ( !is_front_page() ) : ?> <div class="top-section">
+		if ( !is_front_page() ) : ?> 
+		<div class="top-section">
 		<?php dazzling_featured_slider(); ?>
 		<?php dazzling_call_for_action(); ?>
-		<?php dazzling_submenu(); ?>
         </div>
+		<?php dazzling_submenu(); ?>
         <div id="content" class="site-content container">
 
             <div class="container main-content-area"><?php
