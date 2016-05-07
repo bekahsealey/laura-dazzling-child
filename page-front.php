@@ -9,39 +9,50 @@
 
 get_header(); ?>
 <div class="meta">
-	<aside class="intro">
-			<?php the_meta(); ?>
+	<aside class="intro"> 
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-5"> 
+					<img class="hoilistic" src="http://www.lauraleelotto.com/wp-content/uploads/2016/04/hoilistic.png">
+				</div>
+				<div class="col-md-7">
+				<?php the_meta(); ?>
+				</div>
+			</div>
+		</div>
 	</aside>
 </div>
 <div class="top-section">
 	<?php dazzling_featured_slider(); ?>
 	<?php dazzling_call_for_action(); ?>
-	<?php dazzling_submenu(); ?>
 </div>
+	<?php dazzling_submenu(); ?>
 <aside class="testimonial">	
-	<div class="container">
-		<?php $args = array(
-			'post_type' => 'lauras_testimonials',
-			'orderby'        => 'rand',
-			'posts_per_page' => '1',
-			);
-		$my_query = new WP_Query( $args );
-		if ( $my_query->have_posts() ) { 
-			while ( $my_query->have_posts() ) {
-				$my_query->the_post();
-				$do_not_duplicate = get_the_ID(); ?>
-				<div class="col-md-4"> 
-				<?php the_post_thumbnail( 'testimonial' ); ?>
-				</div>
-				<div class="col-md-8 quote">
-				<?php the_content(); ?>
-				</div>
-				<?php
+	<div class="container-fluid">
+		<div class="row">
+			<?php $args = array(
+				'post_type' => 'lauras_testimonials',
+				'orderby'        => 'rand',
+				'posts_per_page' => '1',
+				);
+			$my_query = new WP_Query( $args );
+			if ( $my_query->have_posts() ) { 
+				while ( $my_query->have_posts() ) {
+					$my_query->the_post();
+					$do_not_duplicate = get_the_ID(); ?>
+					<div class="col-md-3 col-md-offset-2"> 
+					<?php the_post_thumbnail( 'testimonial' ); ?>
+					</div>
+					<div class="col-md-5 quote">
+					<?php the_content(); ?>
+					</div>
+					<?php
 
+				}
 			}
-		}
-		wp_reset_postdata();
-		?>
+			wp_reset_postdata();
+			?>
+		</div>
 	</div>
 </aside>
 
@@ -61,44 +72,46 @@ get_header(); ?>
                 }
                 ?>
                 <div class="row <?php echo $layout_class; ?>">
-	<div id="primary" class="content-area col-sm-12 col-md-12">
-		<main id="main" class="site-main" role="main">
-			<?php while ( have_posts() ) : the_post(); ?>
+					<div id="primary" class="content-area col-sm-12 col-md-12">
+						<main id="main" class="site-main" role="main">
+							<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php get_template_part( 'content', 'page' ); ?>
+								<?php get_template_part( 'content', 'page' ); ?>
 
-			<?php endwhile; // end of the loop. ?>
-			
-		</main><!-- #main -->
+							<?php endwhile; // end of the loop. ?>
+							
+						</main><!-- #main -->
 
-	</div><!-- #primary -->
+					</div><!-- #primary -->
 
                 </div><!-- close .row -->
             </div><!-- close .container -->
         </div><!-- close .site-content -->
 
 <aside class="testimonial">	
-	<div class="container">
-		<?php $args = array(
-			'post_type' => 'lauras_testimonials',
-			'post__not_in' => array( $do_not_duplicate ),
-			'orderby'        => 'rand',
-			'posts_per_page' => '1',
-		);
-		$my_query = new WP_Query( $args );
-		if ( $my_query->have_posts() ) { 
-			while ( $my_query->have_posts() ) {
-				$my_query->the_post(); ?>
-				<div class="col-md-8 quote"> 
-				<?php the_content(); ?>
-				</div>
-				<div class="col-md-4">
-				<?php the_post_thumbnail( 'testimonial' ); ?>
-				</div>
-				<?php
+	<div class="container-fluid">
+		<div class="row">
+			<?php $args = array(
+				'post_type' => 'lauras_testimonials',
+				'post__not_in' => array( $do_not_duplicate ),
+				'orderby'        => 'rand',
+				'posts_per_page' => '1',
+			);
+			$my_query = new WP_Query( $args );
+			if ( $my_query->have_posts() ) { 
+				while ( $my_query->have_posts() ) {
+					$my_query->the_post(); ?>
+					<div class="col-md-5 col-md-offset-2 quote">
+					<?php the_content(); ?>
+					</div>
+					<div class="col-md-3"> 
+					<?php the_post_thumbnail( 'testimonial' ); ?>
+					</div>
+					<?php
+				}
 			}
-		}
-		?>
+			?>
+		</div>
 	</div>
 </aside>
 <div class="featured">
