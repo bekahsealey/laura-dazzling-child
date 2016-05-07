@@ -32,8 +32,9 @@ $lt-gray: #b5b5b5;
 $gray: #6b6b6b;
 $md-gray: #424242;
 $dk-gray: #2d2d2d;
-$blue: #7960d7;
-$lt-blue: #9d8ae6;
+$blue: #6369D8;
+$lt-blue: #8c91e6;
+$md-blue: #444ACB;
 $white: #e3e3e3;
 
 $element: $purple;
@@ -41,6 +42,7 @@ $h-element: $deep-wine;
 $action-bg: $md-green;
 $action-a-border: $mustard;
 $action-a-text: $lt-mustard;
+$sub-action: $deep-wine;
 $title: $lt-green;
 $body-text: $gray;
 $link: $deep-purple;
@@ -48,6 +50,8 @@ $h-link: $deep-wine;
 $main-nav-link: $md-gray;
 $main-nav-bg: $lt-purple;
 $main-nav-dd: $deep-purple;
+$h-nav-bg: rgba($deep-purple, .10);
+$active-nav-bg: rgba($deep-purple, .20);
 $footer-widget-bg: $md-green;
 $footer-bg: $dk-green;
 $footer-text: $dk-gray;
@@ -58,7 +62,49 @@ $testimonial-bg: $lt-blue;
 $module-a: $white;
 $h-module: $md-gray;
 $module-text: $lt-gray;
+$secondary-bg: $deep-purple;
+$secondary-text: lighten($lt-gray, 10%);
+$secondary-link: $lt-green;
+$secondary-h-link: $lt-purple;
 
+
+.nav-justified > li > a {
+	margin: 5px;
+}
+.nav-pills > li > a {
+	border: 1px $h-nav-bg solid;
+}
+
+.nav > li > a:hover,
+.nav > li > a:focus {
+  text-decoration: none;
+  background-color: $h-nav-bg;
+}
+.nav-pills > li.active > a,
+.dropdown-menu > .active > a, 
+.dropdown-menu > .active > a:focus, 
+.dropdown-menu > .active > a:hover {
+	background: $active-nav-bg;
+	color: $link;
+}
+
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus {
+	background: $h-nav-bg;
+	color: $h-link;
+}
+.action a {
+color: #fff;
+font-weight: bold;
+background: $sub-action;
+border: 1px $sub-action solid;
+}
+.action a:hover,
+.action a:focus {
+color: $sub-action;
+background: transparent;
+border: 1px $sub-action solid;
+}
 
 .intro {
 	font-family: fontawesome;
@@ -76,10 +122,7 @@ $module-text: $lt-gray;
 .testimonial {
 	background: $testimonial-bg;
 	padding: 3em 0;
-	& div:first-child {
-		margin: auto;
-		font-size: 1.5rem;
-	}
+	font-size: 1.6rem;
 	& .wp-post-image {
 		border-radius: 50%;
 		display: block;
@@ -138,9 +181,33 @@ $module-text: $lt-gray;
 .site-info a, .footer-nav a {
 	text-decoration: underline;
 } 
-.nav-pills > li.active > a,.dropdown-menu > .active > a, .dropdown-menu > .active > a:focus, .dropdown-menu > .active > a:hover {
-	background: $md-green;
+
+.hoilistic {
+	margin: 1em 0;
 }
+
+#secondary {
+	background: $secondary-bg;
+	color: $secondary-text;
+	padding: 10px;
+	& li {
+		padding: 0;
+	}
+	& a {
+		color: $secondary-link;
+		display: inline-block;
+		padding: 10px 2px;
+	}
+	& a:hover {
+		background: $secondary-h-link;
+	}
+	& .widget_archive ul li::before,
+	.widget_categories ul li::before,
+	.widget_recent_comments ul li::before {
+		margin-right: 4px;
+	}
+}
+
 /*******
  **
  ** Custom CSS
@@ -149,8 +216,8 @@ $module-text: $lt-gray;
  */
 .home-widget .widget_rss .widgettitle { display: none; }
 #logo {
-position: relative;
-padding-top: 128px;
+	position: relative;
+	padding-top: 72px;
 	& p {
 		margin-top: 1.4em;
 	}
@@ -163,17 +230,31 @@ padding-top: 128px;
 		line-height: 20px;
 	}
 }
+.navbar-toggle {
+	z-index: 100;
+}
+#nav.affix {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index:10;
+}
 .site-title a:before {
 	content: ' ';
 	background: url(images/lll-logo.png) center center;
 	background-size: contain;
-	width: 128px;
-	height: 128px;
+	width: 72px;
+	height: 72px;
 	position: absolute;
 	top: 10px;
 	left: 0;
 	right: 0;
 	margin: auto;
+}
+@media (max-width: 768px) {
+	.testimonial .pull-right {
+		float: none !important;
+	}
 }
 @media (min-width: 768px) {
 	.navbar-brand, .site-title, .site-description {
@@ -224,4 +305,8 @@ padding-top: 128px;
 	.flex-container.between {
 			justify-content: space-between;
 		}
+	.scroll-stick.navbar-fixed-top {
+		    margin-top: 32px;
+		    background: #fff;
+	}
 }

@@ -11,6 +11,41 @@
  Tags:         Tags: green, light, white, gray, black, purple, one-column, two-columns, right-sidebar, fluid-layout, responsive-layout, responsive-layout, photoblogging, left-sidebar, translation-ready, custom-background, custom-colors, custom-menu, featured-images, full-width-template, post-formats, theme-options, threaded-comments
  Text Domain:  dazzling
 */
+.nav-justified > li > a {
+  margin: 5px; }
+
+.nav-pills > li > a {
+  border: 1px rgba(57, 1, 92, 0.1) solid; }
+
+.nav > li > a:hover,
+.nav > li > a:focus {
+  text-decoration: none;
+  background-color: rgba(57, 1, 92, 0.1); }
+
+.nav-pills > li.active > a,
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:focus,
+.dropdown-menu > .active > a:hover {
+  background: rgba(57, 1, 92, 0.2);
+  color: #39015c; }
+
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus {
+  background: rgba(57, 1, 92, 0.1);
+  color: #6d0042; }
+
+.action a {
+  color: #fff;
+  font-weight: bold;
+  background: #6d0042;
+  border: 1px #6d0042 solid; }
+
+.action a:hover,
+.action a:focus {
+  color: #6d0042;
+  background: transparent;
+  border: 1px #6d0042 solid; }
+
 .intro {
   font-family: fontawesome;
   font-size: 1.4em;
@@ -23,11 +58,9 @@
     display: none; }
 
 .testimonial {
-  background: #9d8ae6;
-  padding: 3em 0; }
-  .testimonial div:first-child {
-    margin: auto;
-    font-size: 1.5rem; }
+  background: #8c91e6;
+  padding: 3em 0;
+  font-size: 1.6rem; }
   .testimonial .wp-post-image {
     border-radius: 50%;
     display: block;
@@ -73,8 +106,25 @@
 .site-info a, .footer-nav a {
   text-decoration: underline; }
 
-.nav-pills > li.active > a, .dropdown-menu > .active > a, .dropdown-menu > .active > a:focus, .dropdown-menu > .active > a:hover {
-  background: #729525; }
+.hoilistic {
+  margin: 1em 0; }
+
+#secondary {
+  background: #39015c;
+  color: #cfcfcf;
+  padding: 10px; }
+  #secondary li {
+    padding: 0; }
+  #secondary a {
+    color: #bce366;
+    display: inline-block;
+    padding: 10px 2px; }
+  #secondary a:hover {
+    background: #9d5cc7; }
+  #secondary .widget_archive ul li::before,
+  #secondary .widget_categories ul li::before,
+  #secondary .widget_recent_comments ul li::before {
+    margin-right: 4px; }
 
 /*******
  **
@@ -87,7 +137,7 @@
 
 #logo {
   position: relative;
-  padding-top: 128px; }
+  padding-top: 72px; }
   #logo p {
     margin-top: 1.4em; }
   #logo a {
@@ -98,18 +148,30 @@
     padding: 15px 15px;
     line-height: 20px; }
 
+.navbar-toggle {
+  z-index: 100; }
+
+#nav.affix {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10; }
+
 .site-title a:before {
   content: ' ';
   background: url(images/lll-logo.png) center center;
   background-size: contain;
-  width: 128px;
-  height: 128px;
+  width: 72px;
+  height: 72px;
   position: absolute;
   top: 10px;
   left: 0;
   right: 0;
   margin: auto; }
 
+@media (max-width: 768px) {
+  .testimonial .pull-right {
+    float: none !important; } }
 @media (min-width: 768px) {
   .navbar-brand, .site-title, .site-description {
     margin-left: initial !important;
@@ -148,6 +210,10 @@
     align-items: center; }
 
   .flex-container.between {
-    justify-content: space-between; } }
+    justify-content: space-between; }
+
+  .scroll-stick.navbar-fixed-top {
+    margin-top: 32px;
+    background: #fff; } }
 
 /*# sourceMappingURL=style.css.map */
