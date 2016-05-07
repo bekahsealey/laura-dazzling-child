@@ -2,6 +2,7 @@
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 function theme_enqueue_styles() {
     wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
+    wp_enqueue_script( 'lauras-sticky-nav', get_stylesheet_directory_uri() . '/js/lauras-sticky-nav.js', array('jquery'), '1.0.0', false );
 
 }
 add_image_size( 'testimonial', 200, 200 , true); // Thumbnail for testimonial images
@@ -25,7 +26,7 @@ function dazzling_submenu() {
     'theme_location'    => 'submenu',
     'depth'             => 2,
     'container'         => 'div',
-    'container_class'   => 'collapse navbar-collapse navbar-ex1-collapse',
+    'container_class'   => 'scroll-stick',
     'menu_class'        => 'nav nav-pills nav-justified',
     'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
     'walker'            => new wp_bootstrap_navwalker()
