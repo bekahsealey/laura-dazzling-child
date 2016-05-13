@@ -68,6 +68,13 @@ $secondary-link: $lt-green;
 $secondary-h-link: $lt-purple;
 
 
+dl {
+	font-size: 1.1em;
+	& dt {
+	margin-top: 10px;
+	font-size: 1.2em;
+	}
+}
 .nav-justified > li > a {
 	margin: 5px;
 }
@@ -184,6 +191,30 @@ border: 1px $sub-action solid;
 
 .hoilistic {
 	margin: 1em 0;
+}
+a.plus {
+	background: url(images/a-plus.png) no-repeat;
+	background-size: contain;
+}
+a.plus.minus {
+	background: url(images/a-minus.png) no-repeat;
+	background-size: contain;
+}
+.click > a { 
+	width: 36px;
+	height: 36px;
+	display: block;
+	margin: auto;
+	& span {
+		position: absolute;
+		left: -3000em;
+	}
+}
+.hide {
+	display: none;
+}
+.hide.show {
+	display: block;
 }
 
 #secondary {
