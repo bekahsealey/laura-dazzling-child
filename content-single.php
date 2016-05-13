@@ -17,7 +17,29 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
+
+
+				<?php if (in_category( 'classes' )){ ?>
+					<div class="entry-content">
+				<dl>
+				<dt>Description: </dt>
+				<dd><?php the_content(); ?></dd>
+				<dt>Cost: </dt>
+<dd>Intro classes are $5/person</dd>
+<dd>All speciality classes are $10/</dd>
+<dd>Group discounts available upon request</dd>
+
+<dt>Time:</dt>
+<dd>Each class runs 1 ½ - 2 hours in length</dd>
+
+<dt>Scheduling:</dt>
+<dd>Classes as scheduled on request. If you are interested in hosting or having Laura speak at an event, please contact her via email or phone. She is available for corporate meetings, lunch and learn sessions, in-home gatherings, and one-on-one sessions.</dd>
+</dl>
+</div>
+<?php } else { ?>
+
 		<?php the_content(); ?>
+<?php } ?>
 		<?php
 			wp_link_pages( array(
 				'before'            => '<div class="page-links">'.__( 'Pages:', 'dazzling' ),
@@ -32,7 +54,7 @@
 	<?php
 		$postType = get_post_type();
 		if ($postType == 'lauras_podcasts') { ?>
-	<div>
+	<div class="entry-content">
 
 			<p>Music and podcast production by:</p>
 			<dl>
