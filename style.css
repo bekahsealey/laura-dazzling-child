@@ -17,6 +17,9 @@ dl {
     margin-top: 10px;
     font-size: 1.2em; }
 
+.entry-content.cfa .cfa-text {
+  font-size: 18px; }
+
 .nav-justified > li > a {
   margin: 5px; }
 
