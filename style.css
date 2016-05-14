@@ -118,6 +118,12 @@ dl {
 .hoilistic {
   margin: 1em 0; }
 
+.description {
+  font-size: 15px !important;
+  font-weight: 200;
+  padding: 0 32px;
+  text-align: justify; }
+
 a.plus {
   background: url(images/a-plus.png) no-repeat;
   background-size: contain; }
@@ -143,7 +149,7 @@ a.plus.minus {
 
 #secondary {
   background: #39015c;
-  color: #cfcfcf;
+  color: #fff;
   padding: 10px; }
   #secondary li {
     padding: 0; }

@@ -63,7 +63,7 @@ $module-a: $white;
 $h-module: $md-gray;
 $module-text: $lt-gray;
 $secondary-bg: $deep-purple;
-$secondary-text: lighten($lt-gray, 10%);
+$secondary-text: #fff;
 $secondary-link: $lt-green;
 $secondary-h-link: $lt-purple;
 
@@ -194,6 +194,12 @@ border: 1px $sub-action solid;
 
 .hoilistic {
 	margin: 1em 0;
+}
+.description {
+	font-size: 15px !important;
+	font-weight: 200;
+	padding: 0 32px;
+	text-align: justify;
 }
 a.plus {
 	background: url(images/a-plus.png) no-repeat;
