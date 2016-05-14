@@ -85,6 +85,13 @@ get_header(); ?>
 					?>
 				</header><!-- .page-header -->
 
+					<?php if ( is_post_type_archive( 'lauras_podcasts' ) ) { ?>
+						<div class="description entry-content">
+						<p>Life is hard and full of lessons. Along life’s journey lie the opportunities to learn, grow, and become more than you thought possible. As a wife, a mother of three, and an entrepreneur at heart, Laura has lived a life full of many lessons and is passionate to share them with you.  Some hard, some easy…all important to the continual growth and expansion of mind, body and spirit. (Don't worry, it's fun! I promise!)</p>
+						<p>Now, Laura is taking what she has learned and wants to help you look for the truth of your own life, and help inspire you to take action where you feel stuck. This podcast (with a side of spunk) will help you shake things up, create awareness, and motivate you to move, grow, and change your life to what you truly want it to be! FUN!!  Twice a month Laura, with the help of special guests and their own lessons, will bring you raw and candid discussions that will be sure to spark a flame in you and awaken your inner child to come out and be heard! Take it from those who are learning the lessons on life’s journey!</p> 
+						<p>This is Laura’s Life Lessons Podcast</p>
+						</div>
+						<?php } ?>
 				<?php /* Start the Loop */ ?>
 				<?php while ( have_posts() ) : the_post(); ?>
 
