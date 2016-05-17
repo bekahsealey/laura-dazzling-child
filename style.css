@@ -20,6 +20,10 @@ dl {
 .entry-content.cfa .cfa-text {
   font-size: 18px; }
 
+.category-classes .cfa-text dd {
+  text-align: left;
+  padding: 0 30px; }
+
 .nav-justified > li > a {
   margin: 5px; }
 

@@ -74,7 +74,7 @@ get_header(); ?>
 					?>
 				</header><!-- .page-header -->
 				<div class="entry-content cfa">
-				<dl class="col-sm-8 col-md-8 col-sm-offset-2 col-md-offset-2 cfa-text">
+				<dl class="col-md-6 cfa-text">
 				<dt>Cost: </dt>
 <dd>Intro classes are $5/person</dd>
 <dd>All speciality classes are $10/</dd>
@@ -82,7 +82,9 @@ get_header(); ?>
 
 <dt>Time:</dt>
 <dd>Each class runs 1 ½ - 2 hours in length</dd>
+</dl>
 
+				<dl class="col-md-6 cfa-text">
 <dt>Scheduling:</dt>
 <dd>Classes as scheduled on request. If you are interested in hosting or having Laura speak at an event, please contact her via email or phone. She is available for corporate meetings, lunch and learn sessions, in-home gatherings, and one-on-one sessions.</dd>
 </dl>
