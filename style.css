@@ -11,6 +11,10 @@
  Tags:         Tags: green, light, white, gray, black, purple, one-column, two-columns, right-sidebar, fluid-layout, responsive-layout, responsive-layout, photoblogging, left-sidebar, translation-ready, custom-background, custom-colors, custom-menu, featured-images, full-width-template, post-formats, theme-options, threaded-comments
  Text Domain:  dazzling
 */
+/* Main Primary color */
+/* Main Secondary color (1) */
+/* Main Secondary color (2) */
+/* Main Complement color */
 dl {
   font-size: 1.1em; }
   dl dt {
@@ -28,36 +32,36 @@ dl {
   margin: 5px; }
 
 .nav-pills > li > a {
-  border: 1px rgba(57, 1, 92, 0.1) solid; }
+  border: 1px rgba(77, 136, 132, 0.1) solid; }
 
 .nav > li > a:hover,
 .nav > li > a:focus {
   text-decoration: none;
-  background-color: rgba(57, 1, 92, 0.1); }
+  background-color: rgba(77, 136, 132, 0.1); }
 
 .nav-pills > li.active > a,
 .dropdown-menu > .active > a,
 .dropdown-menu > .active > a:focus,
 .dropdown-menu > .active > a:hover {
-  background: rgba(57, 1, 92, 0.2);
-  color: #39015c; }
+  background: rgba(77, 136, 132, 0.2);
+  color: #4D8884; }
 
 .nav-pills > li.active > a:hover,
 .nav-pills > li.active > a:focus {
-  background: rgba(57, 1, 92, 0.1);
-  color: #6d0042; }
+  background: rgba(77, 136, 132, 0.1);
+  color: #5A6D93; }
 
 .action a {
   color: #fff;
   font-weight: bold;
-  background: #6d0042;
-  border: 1px #6d0042 solid; }
+  background: #5A6D93;
+  border: 1px #5A6D93 solid; }
 
 .action a:hover,
 .action a:focus {
-  color: #6d0042;
+  color: #5A6D93;
   background: transparent;
-  border: 1px #6d0042 solid; }
+  border: 1px #5A6D93 solid; }
 
 .intro {
   font-family: fontawesome;
@@ -71,7 +75,7 @@ dl {
     display: none; }
 
 .testimonial {
-  background: #8c91e6;
+  background: #DDE2EA;
   padding: 3em 0;
   font-size: 1.6rem; }
   .testimonial .wp-post-image {
@@ -80,7 +84,7 @@ dl {
     margin: auto; }
 
 .featured {
-  background: #7d1f58;
+  background: #8593B0;
   padding: 2em;
   color: #b5b5b5; }
   .featured a {
@@ -88,7 +92,7 @@ dl {
   .featured a:hover, .featured a:focus {
     color: #424242; }
   .featured .module {
-    background: #6d0042;
+    background: #5A6D93;
     margin: 0 1em;
     padding: 0.5em 2em 1em; }
     .featured .module p:first-of-type {
@@ -116,11 +120,15 @@ dl {
   .featured .podcast-button:hover, .featured .podcast-button:focus {
     background: #e3e3e3; }
 
+.wp-caption, figcaption {
+  color: #333; }
+
 .site-info a, .footer-nav a {
   text-decoration: underline; }
 
 .hoilistic {
-  margin: 1em 0; }
+  margin: 1em 0;
+  width: 200px; }
 
 .description {
   font-size: 15px !important;
@@ -155,17 +163,23 @@ a.plus.minus {
   display: block; }
 
 #secondary {
-  background: #39015c;
-  color: #fff;
+  background: #FFE7B9;
+  color: #b5b5b5;
   padding: 10px; }
+  #secondary aside {
+    background: #FFF1D8;
+    padding: 10px; }
+    #secondary aside .widget-title {
+      color: #DDBC7D;
+      border-bottom: 1px solid #DDBC7D; }
   #secondary li {
     padding: 0; }
   #secondary a {
-    color: #bce366;
+    color: #DDA77D;
     display: inline-block;
     padding: 10px 2px; }
   #secondary a:hover {
-    background: #9d5cc7; }
+    background: #FFD7B9; }
   #secondary .widget_archive ul li::before,
   #secondary .widget_categories ul li::before,
   #secondary .widget_recent_comments ul li::before {
@@ -186,7 +200,7 @@ a.plus.minus {
   #logo p {
     margin-top: 1.4em; }
   #logo a {
-    color: #bce366;
+    color: #4D8884;
     font-size: 24px;
     margin: 8px 0;
     height: 50px;
@@ -204,7 +218,7 @@ a.plus.minus {
 
 .site-title a:before {
   content: ' ';
-  background: url(images/lll-logo.png) center center;
+  background: url(images/new-lll-logo.png) center center;
   background-size: contain;
   width: 72px;
   height: 72px;
@@ -217,14 +231,30 @@ a.plus.minus {
 .scroll-stick {
   background: #fff; }
 
+.copyright {
+  margin: 10px 0 20px 0;
+  float: right;
+  text-align: justify; }
+
 @media (max-width: 768px) {
   .testimonial .pull-right {
-    float: none !important; } }
+    float: none !important; }
+
+  .navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border-color: white;
+    background: white; }
+
+  #logo p.site-title {
+    text-align: center; } }
 @media (min-width: 768px) {
+  .home #main {
+    max-width: 1080px;
+    margin: auto; }
+
   .navbar-brand, .site-title, .site-description {
     margin-left: initial !important;
     text-align: center;
-    color: #bce366; }
+    color: #FFF1D8; }
 
   .flex-container {
     display: flex; }
@@ -240,7 +270,7 @@ a.plus.minus {
         font-size: 1.2em;
         color: #424242; }
       .flex-container ul.nav a:hover {
-        color: #6d0042; }
+        color: #5A6D93; }
     .flex-container .navbar-header, .flex-container .left, .flex-container .right, .flex-container .module {
       flex: 1 1 100%; }
     .flex-container .module {
@@ -261,6 +291,9 @@ a.plus.minus {
     justify-content: space-between; }
 
   .scroll-stick.navbar-fixed-top {
+    top: 0px; }
+
+  .logged-in .scroll-stick.navbar-fixed-top {
     top: 32px; } }
 
 /*# sourceMappingURL=style.css.map */

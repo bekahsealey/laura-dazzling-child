@@ -16,56 +16,66 @@
 // Color variables
  
 
-$purple: #58038e;
-$deep-purple: #39015c;
-$lt-purple: #9d5cc7;
-$lt-green: #bce366;
-$md-green: #729525;
-$dk-green: #598100;
-$mustard: #d4d100;
-$lt-mustard: #eae73a;
-$deep-wine: #6d0042;
-$md-wine: #7d1f58;
-$rose: #d33595;
-$lt-rose: #d35fa5;
+
+
+
+$green: #ABCAC8; 	/* Main Primary color */
+$lt-green: #D9E7E6; 
+$md-green: #77A4A1;
+$dk-green: #4D8884; 
+
+$blue: #B4BED1; 	/* Main Secondary color (1) */
+$lt-blue: #DDE2EA;
+$md-blue: #8593B0; 
+$dk-blue: #5A6D93; 
+
+$yellow: #FFF1D8; 	/* Main Secondary color (2) */
+$lt-yellow: #FFF9EF; 
+$md-yellow: #FFE7B9; 
+$dk-yellow: #DDBC7D; 
+
+$tan: #FFE9D8; 	/* Main Complement color */
+$lt-tan: #FFF6EF; 
+$md-tan: #FFD7B9; 
+$dk-tan: #DDA77D; 
+
 $lt-gray: #b5b5b5;
 $gray: #6b6b6b;
 $md-gray: #424242;
 $dk-gray: #2d2d2d;
-$blue: #6369D8;
-$lt-blue: #8c91e6;
-$md-blue: #444ACB;
 $white: #e3e3e3;
 
-$element: $purple;
-$h-element: $deep-wine;
-$action-bg: $md-green;
-$action-a-border: $mustard;
-$action-a-text: $lt-mustard;
-$sub-action: $deep-wine;
-$title: $lt-green;
+$element: $green;
+$h-element: $dk-blue;
+$action-bg: $md-yellow;
+$action-a-border: $dk-tan;
+$action-a-text: $md-tan;
+$sub-action: $dk-blue;
+$title: $yellow;
 $body-text: $gray;
-$link: $deep-purple;
-$h-link: $deep-wine;
+$link: $dk-green;
+$h-link: $dk-blue;
 $main-nav-link: $md-gray;
-$main-nav-bg: $lt-purple;
-$main-nav-dd: $deep-purple;
-$h-nav-bg: rgba($deep-purple, .10);
-$active-nav-bg: rgba($deep-purple, .20);
-$footer-widget-bg: $md-green;
-$footer-bg: $dk-green;
+$main-nav-bg: $lt-green;
+$main-nav-dd: $dk-green;
+$h-nav-bg: rgba($dk-green, .10);
+$active-nav-bg: rgba($dk-green, .20);
+$footer-widget-bg: $md-yellow;
+$footer-bg: $dk-yellow;
 $footer-text: $dk-gray;
-$footer-link: $lt-green;
-$featured-bg: $md-wine;
-$featured-mod: $deep-wine;
+$footer-link: $lt-yellow;
+$featured-bg: $md-blue;
+$featured-mod: $dk-blue;
 $testimonial-bg: $lt-blue;
 $module-a: $white;
 $h-module: $md-gray;
 $module-text: $lt-gray;
-$secondary-bg: $deep-purple;
-$secondary-text: #fff;
-$secondary-link: $lt-green;
-$secondary-h-link: $lt-purple;
+$secondary-bg: $md-yellow;
+$secondary-aside-bg: $yellow;
+$secondary-text: $lt-gray;
+$secondary-link: $dk-tan;
+$secondary-h-link: $md-tan;
+$secondary-dk: $dk-yellow;
 
 
 dl {
@@ -192,13 +202,19 @@ border: 1px $sub-action solid;
 	}
 }
 
+.wp-caption, figcaption {
+  color: #333;
+}
+
 .site-info a, .footer-nav a {
 	text-decoration: underline;
 } 
 
 .hoilistic {
-	margin: 1em 0;
+  margin: 1em 0; 
+  width: 200px;
 }
+
 .description {
 	font-size: 15px !important;
 	font-weight: 200;
@@ -237,6 +253,14 @@ margin-top: -1em;
 	background: $secondary-bg;
 	color: $secondary-text;
 	padding: 10px;
+	& aside {
+	background: $secondary-aside-bg;
+	padding: 10px;
+	& .widget-title {
+	color: $secondary-dk;
+	border-bottom: 1px solid $secondary-dk;
+	}
+	}
 	& li {
 		padding: 0;
 	}
@@ -269,7 +293,7 @@ margin-top: -1em;
 		margin-top: 1.4em;
 	}
 	& a {
-		color: #bce366;
+		color: $link;
 		font-size: 24px;
 		margin: 8px 0;
 		height: 50px;
@@ -288,7 +312,7 @@ margin-top: -1em;
 }
 .site-title a:before {
 	content: ' ';
-	background: url(images/lll-logo.png) center center;
+	background: url(images/new-lll-logo.png) center center;
 	background-size: contain;
 	width: 72px;
 	height: 72px;
@@ -301,12 +325,29 @@ margin-top: -1em;
 .scroll-stick {
 	    background: #fff;
 }
+.copyright {
+	margin: 10px 0 20px 0;
+	float: right;
+	text-align: justify;
+}
+
 @media (max-width: 768px) {
 	.testimonial .pull-right {
-		float: none !important;
-	}
+		float: none !important; 
+		}
+  	.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+		border-color: white; 
+		background: white;
+}
+#logo p.site-title {
+    text-align: center;
+  }
 }
 @media (min-width: 768px) {
+  .home #main {
+	max-width: 1080px;
+	margin: auto;
+   }
 	.navbar-brand, .site-title, .site-description {
 		margin-left: initial !important;
 		text-align: center;
@@ -356,6 +397,9 @@ margin-top: -1em;
 			justify-content: space-between;
 		}
 	.scroll-stick.navbar-fixed-top {
+		    top: 0px;
+	}
+	.logged-in .scroll-stick.navbar-fixed-top {
 		    top: 32px;
 	}
 }
