@@ -396,10 +396,10 @@ margin-top: -1em;
 	.flex-container.between {
 			justify-content: space-between;
 		}
-	.scroll-stick.navbar-fixed-top {
-		    top: 0px;
-	}
-	.logged-in .scroll-stick.navbar-fixed-top {
-		    top: 32px;
-	}
+}
+.scroll-stick.navbar-fixed-top {
+	    top: 0px;
+}
+.logged-in .scroll-stick.navbar-fixed-top {
+	    top: 32px;
 }
