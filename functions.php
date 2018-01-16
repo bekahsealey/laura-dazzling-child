@@ -63,5 +63,17 @@ function dazzling_right_menu() {
 } /* end left and right header menus */ 
 
 
+function lauras_remove_some_widgets(){
+
+unregister_sidebar( 'home-widget-1' );
+unregister_sidebar( 'home-widget-2' );
+unregister_sidebar( 'home-widget-3' );
+
+unregister_sidebar( 'footer-widget-1' );
+unregister_sidebar( 'footer-widget-2' );
+unregister_sidebar( 'footer-widget-3' );
+}
+
+add_action( 'widgets_init', 'lauras_remove_some_widgets', 11 );
 
 ?>

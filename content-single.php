@@ -53,7 +53,7 @@
 	</div><!-- .entry-content -->
 	<?php
 		$postType = get_post_type();
-		if ($postType == 'lauras_podcasts') { ?>
+		if ($postType == 'podcast') { ?>
 	<div class="entry-content">
 
 			<p>Music and podcast production by:</p>

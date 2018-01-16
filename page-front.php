@@ -13,7 +13,7 @@ get_header(); ?>
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-md-5"> 
-					<img class="hoilistic" src="http://www.lauraleelotto.com/wp-content/uploads/2016/04/hoilistic.png">
+					<img class="hoilistic" src="http://www.lauraleelotto.com/wp-content/uploads/2017/01/logo.png">
 				</div>
 				<div class="col-md-7">
 				<?php the_meta(); ?>
@@ -35,6 +35,7 @@ get_header(); ?>
 				'orderby'        => 'rand',
 				'posts_per_page' => '1',
 				);
+			$do_not_duplicate = '';
 			$my_query = new WP_Query( $args );
 			if ( $my_query->have_posts() ) { 
 				while ( $my_query->have_posts() ) {
@@ -120,7 +121,7 @@ get_header(); ?>
 			<h2 class="widget-title">Podcasts</h2>
 			<ul>
 			<?php $args = array(
-				'post_type' => 'lauras_podcasts',
+				'post_type' => 'podcast',
 				'posts_per_page' => '5',
 				);
 			$my_query = new WP_Query( $args );

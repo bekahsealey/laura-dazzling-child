@@ -74,21 +74,21 @@ get_header(); ?>
 					?>
 				</header><!-- .page-header -->
 				<div class="entry-content cfa">
-				<dl class="col-md-6 cfa-text">
-				<dt>Cost: </dt>
-<dd>Intro classes are $5/person</dd>
-<dd>All speciality classes are $10/</dd>
-<dd>Group discounts available upon request</dd>
+					<dl class="col-md-6 cfa-text">
+						<dt>Cost: </dt>
+						<dd>Intro classes are $5/person</dd>
+						<dd>All speciality classes are $10/</dd>
+						<dd>Group discounts available upon request</dd>
 
-<dt>Time:</dt>
-<dd>Each class runs 1 ½ - 2 hours in length</dd>
-</dl>
+						<dt>Time:</dt>
+						<dd>Each class runs 1 ½ - 2 hours in length</dd>
+					</dl>
 
-				<dl class="col-md-6 cfa-text">
-<dt>Scheduling:</dt>
-<dd>Classes as scheduled on request. If you are interested in hosting or having Laura speak at an event, please contact her via email or phone. She is available for corporate meetings, lunch and learn sessions, in-home gatherings, and one-on-one sessions.</dd>
-</dl>
-</div>
+					<dl class="col-md-6 cfa-text">
+						<dt>Scheduling:</dt>
+						<dd>Classes as scheduled on request. If you are interested in hosting or having Laura speak at an event, please contact her via email or phone. She is available for corporate meetings, lunch and learn sessions, in-home gatherings, and one-on-one sessions.</dd>
+					</dl>
+				</div>
 			<?php if ( have_posts() ) : ?>
 				<?php if (is_category( 'classes' )){
 					$args = array ( 'category_name' => 'classes', 'posts_per_archive_page' => -1, 'order' => 'ASC');
