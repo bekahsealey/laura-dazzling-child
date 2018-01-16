@@ -16,6 +16,7 @@ get_header(); ?>
 					<img class="hoilistic" src="http://www.lauraleelotto.com/wp-content/uploads/2017/01/logo.png">
 				</div>
 				<div class="col-md-7">
+					<!-- Get intro post text from page meta  -->
 				<?php the_meta(); ?>
 				</div>
 			</div>
